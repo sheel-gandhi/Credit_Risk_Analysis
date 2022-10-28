@@ -11,28 +11,59 @@ We will oversample the data using the RandomOverSampler and SMOTE algorithms, an
 ## Results
 
 ### Random Over Sampler
-
 In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced.
-The results for Credit Card data under Random Over Sampler is as follows:
-Balanced Accuracy Score: 
-![RandomOverSampler](https://user-images.githubusercontent.com/108366412/198415167-cf3afacb-ff49-47b7-a8c6-c3e624be9b96.png)
+![RandomOverSampler](https://user-images.githubusercontent.com/108366412/198415167-cf3afacb-ff49-47b7-a8c6-c3e624be9b96.png)### SMOTE
+
+The results for Credit Card data under Random Over Sampler are as follows:
+* **Balanced Accuracy Score is at 0.6257 which means that 62.6% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.01 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 1% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.68 and 0.57 respectively. This means that 57% of the high risk applicants are classified as high risk whereas only 68% of the low risk applicants are classified as low risk.**
 
 ### SMOTE
+In SMOTE, new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
 ![SMOTE](https://user-images.githubusercontent.com/108366412/198415201-e70a8413-b670-412b-b4e9-a8e333482c8e.png)
 
+The results for Credit Card data under SMOTE are as follows:
+* **Balanced Accuracy Score is at 0.6277 which means that 62.8% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.01 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 1% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.62 and 0.53 respectively. This means that 62% of the high risk applicants are classified as high risk whereas only 63% of the low risk applicants are classified as low risk.**
+
 ### Cluster Centroids
+In Cluster centroid undersampling, algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.
 ![ClusterCentroids](https://user-images.githubusercontent.com/108366412/198415229-e4f56a7c-a477-41bf-af47-6c088ced46c0.png)
 
+The results for Credit Card data under Cluster Centroids are as follows:
+* **Balanced Accuracy Score is at 0.5293 which means that 52.93% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.01 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 1% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.45 and 0.61 respectively. This means that 45% of the high risk applicants are classified as high risk whereas only 61% of the low risk applicants are classified as low risk.**
+
 ### SMOTEENN
+SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process: Oversample the minority class with SMOTE.
+Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 ![SMOTEENN](https://user-images.githubusercontent.com/108366412/198415249-fa53ae2a-ed9e-409e-a726-bc225d8c51ee.png)
 
+The results for Credit Card data under SMOTEENN are as follows:
+* **Balanced Accuracy Score is at 0.6548 which means that 65.48% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.01 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 1% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.61 and 0.70 respectively. This means that 61% of the high risk applicants are classified as high risk whereas only 70% of the low risk applicants are classified as low risk.**
+
 ### Balanced Random Forest Classifier
+The Random Forests Classifier is composed of several small decision trees created from random sampling. By using the Balanced Random Forests, we oversample from the minority class to balance the classes.
 ![BalancedRandomForestClassifier](https://user-images.githubusercontent.com/108366412/198415274-53f49d67-5dab-42ad-8597-bd26f41fe00a.png)
 
+The results for Credit Card data under Balanced Random Forest Classifier are as follows:
+* **Balanced Accuracy Score is at 0.8160 which means that 81.60% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.04 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 4% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.72 and 0.91 respectively. This means that 72% of the high risk applicants are classified as high risk whereas only 91% of the low risk applicants are classified as low risk.**
+
 ### Easy Ensemble Classifier
+In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
 ![EasyEnsembleClassifier](https://user-images.githubusercontent.com/108366412/198415317-dda15141-c7d0-474e-9bc5-11ed3a747e4e.png)
 
+The results for Credit Card data under Easy Ensemble Classifier are as follows:
+* **Balanced Accuracy Score is at 0.9253 which means that 92.53% of the time the minority class is balanced by oversampling**
+* **Precision: The precision for high risk and low risk applicants is 0.07 and 1.00 respectively. This means that 100% of the predicted low risk applicants are actually low risk, whereas only 7% of the predicted high risk applicants actually fall under high risk.**
+* **Recall: The recall rate for high risk and low risk applicants is 0.91 and 0.94 respectively. This means that 91% of the high risk applicants are classified as high risk whereas only 94% of the low risk applicants are classified as low risk.**
 
 ## Summary
 
-### Recommendation
