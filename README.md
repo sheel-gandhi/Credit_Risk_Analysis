@@ -58,6 +58,7 @@ The results for Credit Card data under Balanced Random Forest Classifier are as 
 
 ### Easy Ensemble Classifier
 In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
+
 ![EasyEnsembleClassifier](https://user-images.githubusercontent.com/108366412/198415317-dda15141-c7d0-474e-9bc5-11ed3a747e4e.png)
 
 The results for Credit Card data under Easy Ensemble Classifier are as follows:
@@ -67,3 +68,6 @@ The results for Credit Card data under Easy Ensemble Classifier are as follows:
 
 ## Summary
 
+With resampling we tried to address the imbalance in the data where one cluster is having too low data points to have a precise prediction. Through our study, we tried different models and through Easy Ensemble Classifier, we got the best results. We are able to get a Balanced Accuracy Score of 92.53% which means 92% of the data is balanced under the model. The Precision rate and Recall rate for high risk candidates is at 7% and 91% which is maximum among all the models. Similarly, low risk candidates Precision rate and Recall rate is also at 100% and 94% respectively. Model. thus is able to predict both high and low risk candidates.
+
+Considering the high accuracy results from the Easy Ensemble Classifier model, we would not recommend running any other model. 
