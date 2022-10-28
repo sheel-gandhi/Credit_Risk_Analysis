@@ -68,6 +68,6 @@ The results for Credit Card data under Easy Ensemble Classifier are as follows:
 
 ## Summary
 
-With resampling we tried to address the imbalance in the data where one cluster is having too low data points to have a precise prediction. Through our study, we tried different models and through Easy Ensemble Classifier, we got the best results. We are able to get a Balanced Accuracy Score of 92.53% which means 92% of the data is balanced under the model. The Precision rate and Recall rate for high risk candidates is at 7% and 91% which is maximum among all the models. Similarly, low risk candidates Precision rate and Recall rate is also at 100% and 94% respectively. Model. thus is able to predict both high and low risk candidates.
+With resampling we tried to address the imbalance in the data where one cluster is having too low data points to have a precise prediction. Through our study, we tried different models and through Easy Ensemble Classifier, we got the best results. We are able to get a Balanced Accuracy Score of 92.53% which means 92% of the data is balanced under the model. The Precision rate and Recall rate for high risk candidates is at 7% and 91% which is maximum among all the models. Similarly, low risk candidates Precision rate and Recall rate is also at 100% and 94% respectively. Model. thus is able to predict both high and low risk candidates with high precision.
 
-Considering the high accuracy results from the Easy Ensemble Classifier model, we would not recommend running any other model. 
+Considering the high accuracy results from the Easy Ensemble Classifier model, we would not recommend running any other model. We should further look into the results from the model and work with other tools beyond Machine Learning. 
